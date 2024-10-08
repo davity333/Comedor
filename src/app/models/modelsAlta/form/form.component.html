@@ -1,0 +1,41 @@
+<div class="flex justify-center">
+<app-titule [titulos]="'Agregar Platillo'"></app-titule>
+<img src="./assets/decorations/agregar.png" class="flex h-10 mt-10 ml-3" alt="">
+</div>
+
+<div class="flex justify-center">
+<p class="text-2xl flex justify-center text-[#968D84] mt-4">En esta sección podrás 
+    subir todos los platillos recién preparados y listos para ser mostrados en el menú</p>
+    <img src="./assets/decorations/charola.jpg" class="flex h-32 -mt-8 ml-3" alt="">
+</div>
+
+    <div class="flex justify-center">
+    
+        <form class="bg-[#10100f1e] h-[55vh] w-[60%] mt-2" [formGroup]="alta">
+            <div class="flex justify-around mt-14">
+                <div class="">
+                <h1 class="text-[2.4vh]">Nombre del platillo</h1>
+                <input class="w-[35vh] border-[1px] border-[#0000004e] mt-1 h-9" 
+                type="text" name="" id="" formControlName="nombre">
+
+                <h1 class="mt-10 text-[2.4vh]">Condimentos del platillo</h1>
+                <textarea name="" id="" class="mt-1 h-20 w-[35vh] border-[1px] border-[#0000004e]" 
+                formControlName="condimentos"></textarea>
+                </div>
+
+                <div class="">
+                <h1 class="text-[2.4vh]">Precio</h1>
+                <input type="number" name="" id="" class="mt-1 h-9 border-[1px]
+                border-[#0000004e]" formControlName="precio">
+                </div>
+
+                <div class="flex items-center">
+                <img src="./assets/decorations/alta.png" class="flex h-36" alt="">
+                </div>
+            </div>
+            <div class="flex justify-center mt-10 gap-10 text-[2.3vh] text-white" id="botones">
+                <button class="bg-[#B9BC87] px-7 py-2 rounded-lg hover:bg-[#a2a476]" (click)="subirDesayuno()">SUBIR A DESAYUNOS</button>
+                <button class="bg-[#87B3BC] px-7 py-2 rounded-lg hover:bg-[#71979f]" (click)="subirCena()">SUBIR A CENAS</button>
+            </div>
+        </form>
+    </div>

@@ -1,0 +1,22 @@
+<h2 class="flex justify-center p-10 text-3xl text-[#967D66] font-bold">LO MAS DESTACADO</h2>
+
+<div class="flex justify-center pb-2">
+    <div class="grid gap-y-8 grid-cols-1 md:grid-cols-3 place-items-center items-center w-full">
+        <div *ngFor="let object of desayunos | slice:0:3" class="bg-[#ffffff] text-[3vh] p-4 w-[40vh] flex 
+        flex-col shadow-[0px_10px_16px_2px_rgba(0,0,0,0.11)]">
+        <div class="flex items-center">
+            <img src="./assets/decorations/breakfast.png" class="h-full flex" alt="">
+        </div>
+        <div class="p-3 overflow-auto max-h-36">
+            <h1 class="text-[#968D84] font-semibold text-[4vh]" id="texto">{{object.names}}</h1>
+            <h1 class="text-[#968D84] font-normal">{{object.condimentos}}</h1>
+            <h1 class="text-[#968D84]">${{object.precio}}</h1>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="flex justify-center p-10">
+<button class="bg-[#F2F3DF] px-14 py-2 text-[3vh] rounded-2xl
+shadow-[13px_12px_7px_-6px_rgba(0,0,0,0.18)]" (click)="ver()">Ver mas</button>
+</div>

@@ -1,0 +1,39 @@
+<div class="flex justify-center">
+<app-titule [titulos]="'Pedidos'"></app-titule>
+<img src="./assets/decorations/pedido.png" class="flex h-16 mt-7 ml-3" alt="">
+</div>
+<div class="flex justify-center">
+    <p class="text-2xl flex justify-center text-[#968D84] mt-4 pl-64 pr-64 text-center">En esta sección muestra 
+        todos los pedidos que te han llegado de los clientes para hacerles entrega de su platillo. 
+        Si el pedido ya a sido entregado, da click en la palomita</p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-16">
+        <div *ngFor="let object of pedidoIndividual let i=index" class="w-[60vh] p-4 mt-7 bg-[#fcfafa] shadow-lg">
+        <div class="p-2">
+        <div class="flex">
+            <h1 class="text-xl font-bold text-red-800">Platillo: </h1>
+            <p class="text-lg font-medium ml-2">{{ object.nameFood }}</p>
+        </div>
+            <p class="text-sm text-gray-600 text-[19px]">{{ object.condimentos }}</p>
+            <div class="flex">
+                <h1 class="text-xl font-bold text-green-700">Precio:</h1>
+                <p class="text-lg ml-2">${{ object.price }}</p>
+            </div>
+    
+            <div class="flex">
+            <h1 class="text-xl font-bold text-blue-600">Pedido para:</h1>
+            <p class="text-lg ml-2">{{ object.namePeople }}</p>
+            </div>
+            <div class="flex">
+                <h1 class="text-xl font-bold text-cyan-600">Domicilio:</h1>
+                <p class="text-lg ml-2">{{ object.addres }}</p>
+            </div>
+            </div>
+            <div class="flex justify-end cursor-pointer" (click)="eliminar(i, object.nameFood, object.condimentos, object.price)" title="Agregar a ventas">
+            <p>✅</p>
+            </div>
+        </div>
+        </div>  
+    
+    

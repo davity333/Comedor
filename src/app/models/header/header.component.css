@@ -1,0 +1,13 @@
+#decoration{
+    filter: drop-shadow(6px 3px 4px #0000006e);
+}
+
+#header{
+    box-shadow: 0px 6px 10px -1px rgba(0,0,0,0.35);
+-webkit-box-shadow: 0px 6px 10px -1px rgba(0,0,0,0.35);
+-moz-box-shadow: 0px 6px 10px -1px rgba(0,0,0,0.35);
+}
+
+#logo:hover{
+    filter: drop-shadow(2px 3px 10px #bc465097);
+}

@@ -1,0 +1,22 @@
+<div class="flex justify-center">
+<app-titule [titulos]="'Desayunos del dia'"></app-titule>
+<img src="./assets/decorations/desayuno.png" id="decoration" class="h-16 mt-5 ml-4" alt="">
+</div>
+
+<div class="flex justify-center mt-10">
+    <div class="grid gap-y-8 grid-cols-1 md:grid-cols-3 place-items-center items-center w-full">
+        <div *ngFor="let object of desayunos let i=index" class="bg-[#ffffff] text-[3vh] p-4 w-[40vh] flex 
+        flex-col shadow-[0px_10px_16px_2px_rgba(0,0,0,0.11)]">
+            <div class="flex items-center">
+                <img src="./assets/decorations/breakfast.png" class="h-full flex" alt="">
+            </div>
+            <div class="p-3 overflow-auto h-40">
+                <h1 class="text-[#968D84] font-semibold text-[4vh]" id="texto">{{object.names}}</h1>
+                <h1 class="text-[#968D84] font-normal">{{object.condimentos}}</h1>
+                <h1 class="text-[#968D84]">${{object.precio}}</h1>
+            </div>
+            <button class="flex text-[2.5vh] justify-center text-amber-600 font-semibold 
+            bg-[#f0eaea] py-2 mt-2 hover:bg-[#e2d8d8]" (click)="agregarCarrito(object)">Agregar a pedidos</button>
+        </div>
+    </div>
+</div>

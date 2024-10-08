@@ -1,0 +1,50 @@
+<app-titule [titulos]="'Servicio a Domicilio'"></app-titule>
+
+<div class="pl-48 pr-48">
+<p class="text-2xl flex justify-center text-[#968D84] mt-4 text-center">Pide tus alimentos a 
+    domicilio sin ningún costo, siempre y cuando permanezcas en el mismo municipio 
+    donde se ubica el comedor</p>
+</div>
+
+<div class="flex justify-center gap-36 mt-10">
+    <div class="h-[47vh] w-[60vh] bg-[#10100f27]">
+        <h1 class="p-5 text-3xl font-light text-[#7b736a]">Historial</h1>
+        <div class="grid grid-cols-1 gap-4 p-4 overflow-auto max-h-56">
+            <div *ngFor="let object of carrito let i=index" class="bg-[#ffffffc5] shadow-md rounded-lg p-1 flex justify-between">
+                <div class="p-2 ">
+                    <p class="text-lg font-semibold">{{object.names}}</p>
+                    <p class="text-sm text-gray-600">{{object.condimentos}}</p>
+                    <p class="text-sm text-green-600 font-bold">${{object.precio}}</p>
+                </div>
+                    <div class="flex items-center pr-2 pl-2 hover:bg-[#ece9e9] cursor-pointer duration-100" (click)="eliminar(object, i)">
+                        <p class="text-[2vh]">Eliminar</p>
+                    </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+        <hr class="w-80 mt-2 border-[#00000062]">
+        </div>
+        <h1 class="mt-1 flex justify-center text-[#593a25] font-semibold">Precio total: ${{precioTotal}}</h1>
+    </div>
+
+    <div class="h-[47vh] w-[60vh] bg-[#10100f27] ">
+        <h1 class="p-5 text-3xl font-light text-[#7b736a]">Datos del usuario</h1>
+
+        <form action="" class="ml-8">
+        <div class="">
+            <h1 class="text-[2.4vh] text-[#968D84]">Nombre completo</h1>
+            <input type="text" name="" id="" class="mt-1 w-[50vh] h-8 border-[0.2vh] border-[#0000005d]" #nombre>
+        </div>
+
+        <div class="mt-2">
+            <h1 class="text-[2.4vh] text-[#968D84]">Domicilio</h1>
+            <textarea name="domicilio" id="area" class="w-[50vh] h-24 border-[0.2vh] border-[#0000005d]" #domicilio></textarea>
+        </div>
+    </form>
+    <div class="flex justify-center mt-3">
+        <button class="bg-[#87B3BC] px-8 py-2 text-white text-[2.3vh] hover:bg-[#76a1a8]" 
+        id="boton" (click)="enviarPedido(nombre.value, domicilio.value)">ENVIAR PEDIDO</button>
+    </div>
+
+    </div>
+</div>

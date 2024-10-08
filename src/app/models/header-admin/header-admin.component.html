@@ -1,0 +1,15 @@
+<header>
+    <img src="./assets/decorations/circulo.png" id="decoration" class="h-56 absolute" alt="">
+    <img [routerLink]="['/homeAdmin']" src="./assets/decorations/logo.png" id="logo" 
+    class="h-36 mt-5 mr-1 cursor-pointer absolute duration-150" alt=""
+    title="Menu">
+
+    <div id="header" class="h-28 w-full bg-[#84c2d7c2] flex justify-center items-center gap-28">
+        <img src="./assets/decorations/chef.png" class="h-24" alt="">
+        <p [routerLink]="['/breakfasts']" class="text-2xl text-cyan-800 font-semibold hover:text-cyan-950 cursor-pointer">Desayunos</p>
+        <p class="text-2xl text-cyan-800 font-semibold hover:text-cyan-950 cursor-pointer">|</p>
+        <p [routerLink]="['/dinners']" class="text-2xl text-cyan-800 font-semibold hover:text-cyan-950 cursor-pointer">Cenas</p>
+
+        
+    </div>
+</header>

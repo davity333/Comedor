@@ -1,0 +1,31 @@
+<div class="flex flex-col justify-center items-center min-h-screen">
+    <div class=" bg-[#CDE3EA]">
+        <h1 class="text-3xl font-bold px-[21.3vh] py-5 text-[#756556]" id="titulo">REGISTRATE</h1>
+    </div>
+
+    
+    <form class="w-[60vh] h-[48vh] bg-[#DDE7EB] text-[2.7vh] text-[#968D84]" [formGroup]="registro">
+        <div class="pt-12">
+        <div class=" ml-10">
+            <h1>Nombre de usuario</h1>
+            <input type="text" name="" id="" class="w-[48vh] mt-2 h-9 border-2 border-[#00000047]" 
+            formControlName="nombre">
+        </div>
+
+        <div class="mt-9 ml-10">
+            <h1>Contraseña</h1>
+            <input type="password" class="w-[48vh] mt-2 h-9 border-2 border-[#00000047]"
+            formControlName="password">
+            <h1 class="text-[1.6vh] text-[#762929]">Min 8, Max 20</h1>
+        </div>
+        </div>
+
+        <div class="flex justify-center mt-10">
+            <button class="bg-[#87B3BC] text-white px-12 py-2 hover:bg-[#698f97]" id="boton" (click)="aceptar()">REGISTRATE</button>
+        </div>
+    </form>
+    <div class="flex justify-center p-2">
+        <h1 class="text-[#756556]">Ya tienes cuenta?</h1>
+    <h1 class="text-[2.3vh] text-[#df8a5f] cursor-pointer hover:text-[#8e3434] ml-2" routerLink="">Inicia sesión</h1>
+    </div>
+</div>
